@@ -32,7 +32,8 @@ func main() {
 	checkForValidFile(romFilepath)
 
 	sdl.Init(sdl.INIT_EVERYTHING)
-	emu := emulator.NewEmulator()
+	emu := emulator.Emulator{}
+	emu.Run()
 	logger.WithField("emu", emu).Warn("I got a new emulator")
 }
 
